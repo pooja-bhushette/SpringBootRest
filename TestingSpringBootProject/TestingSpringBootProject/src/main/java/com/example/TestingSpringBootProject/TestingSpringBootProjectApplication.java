@@ -11,6 +11,7 @@ public class TestingSpringBootProjectApplication {
 		SpringApplication.run(TestingSpringBootProjectApplication.class, args);
 		System.out.println("Hello");
 		System.out.println("Ji");
+		System.out.println("Sanam");
 	}
 
 }
