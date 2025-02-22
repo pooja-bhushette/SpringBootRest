@@ -33,7 +33,7 @@ public class UserController {
 
 	@PutMapping("users/{id}")
 	public UserResponse UpdateUsers(@PathVariable int id, @RequestBody UpdateUserRequest updateUserRequest) {
-		return userService.UpdateStudent(updateUserRequest, id);
+		return userService.UpdateUser(updateUserRequest, id);
 	}
 
 	@DeleteMapping("users/{id}")

@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.example.userservice.transformer.UserTransformer.transformToUser;
@@ -39,7 +38,7 @@ public class UserService {
                 .orElseThrow(() -> new NotFoundException("User not found with id " + id));
     }
 
-    public UserResponse UpdateStudent(UpdateUserRequest updateUserRequest, int id) {
+    public UserResponse UpdateUser(UpdateUserRequest updateUserRequest, int id) {
         User existingUser = repository.findById(id)
                 .orElseThrow(() -> new NotFoundException("User not found with id " + id));
         existingUser.setName(updateUserRequest.getName());
